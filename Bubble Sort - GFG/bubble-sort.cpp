@@ -23,27 +23,17 @@ class Solution
     public:
     //Function to sort the array using bubble sort algorithm.
     void bubbleSort(int arr[], int n)
-    {
-        int i ,j ,k=1;
-        for (int i = 0 ;i<= n-k;){
-                for(j = 1;j<=n-k;){
-                    if(arr[j]<arr[i]){
-                        int temp = arr[j];
-                        arr[j] = arr[i];
-                        arr[i] = temp;
-                        i++;
-                        j++;
-                    }
-                    else{
-                        i++;
-                        j++;
-                    }
-                    
+    {  int i,j;
+        for(i = n-1;i>=1;i--){
+            for(j = 0 ;j<=i-1;j++){
+                if(arr[j]>arr[j+1]){
+                    int t = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1]= t;
                 }
-                i=0;
-                j=1;
-                k++;
-         }
+                
+            }
+        }
     }
 };
 
