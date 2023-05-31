@@ -10,22 +10,15 @@ using namespace std;
 class Solution {
   public:
     bool arraySortedOrNot(int arr[], int n) {
-        int v = 0;
-        for(int i = 0 ;i<n-1 ;i++){
-            if (arr[i]<=arr[i+1]){
-                if(i==(n-2)){
-                    v=1;
-                }
-            }
-            else 
-             return false;
-        }
-        if(n==1)
-         return true;
-        if(v==1){
-            return true;
-        }
-        
+       
+       for(int i = 1;i<=n-1;i++){
+           if(arr[i]>=arr[i-1]){
+               
+           }
+           else
+            return false;
+       }
+       return true;
         
     }
 };
