@@ -23,12 +23,11 @@ public:
         // return index;
         int i = 0;
         int j=0;
-        int k= 1;
         while(i<n){
             if(a[i]!=a[j]){
                 j++;
                 a[j]=a[i];
-                k=0; 
+            
             }
            
              i++;
