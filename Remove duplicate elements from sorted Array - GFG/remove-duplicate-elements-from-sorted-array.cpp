@@ -11,16 +11,31 @@ using namespace std;
 class Solution{
 public:
     int remove_duplicate(int a[],int n){
-        set <int> st;
-        for(int i = 0 ;i<n;i++){
-            st.insert(a[i]);
+        // set <int> st;
+        // for(int i = 0 ;i<n;i++){
+        //     st.insert(a[i]);
+        // }
+        // int index = 0;
+        // for(auto it : st){
+        //     a[index]= it;
+        //     index++;
+        // }
+        // return index;
+        int i = 0;
+        int j=0;
+        int k= 1;
+        while(i<n){
+            if(a[i]!=a[j]){
+                j++;
+                a[j]=a[i];
+                k=0; 
+            }
+           
+             i++;
         }
-        int index = 0;
-        for(auto it : st){
-            a[index]= it;
-            index++;
-        }
-        return index;
+         return j + 1;
+        
+        
     }
 };
 
