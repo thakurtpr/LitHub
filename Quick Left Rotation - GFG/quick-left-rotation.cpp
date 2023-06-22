@@ -8,23 +8,12 @@ class Solution{
 	
 	public:
 	void leftRotate(int arr[], int k, int n) 
-	{ 
-	    if(k/n>0){
-	        k=k%n;
-	    }
-	   int temp[k] ;
-	   for(int i = 0 ;i<k;i++){
-	       temp [i] = arr[i];
-	   }
-
-	   for(int i = k;i<n;i++){
-	       arr[i-k] = arr[i];
-
-	   }
-	   int j = 0 ;
-	   for(int i = n-k;i<n;i++){
-	       arr[i] = temp [ j ];
-	       j++;
+	{
+	    vector<int>temp(arr,arr+n);
+	
+	   k = k%n;
+	   for(int i= 0 ;i<n;i++){
+	       arr[i] = temp [(i+k)%n];
 	   }
 	} 
 		 
