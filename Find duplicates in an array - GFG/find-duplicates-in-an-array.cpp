@@ -6,25 +6,22 @@ using namespace std;
 class Solution{
   public:
     vector<int> duplicates(int arr[], int n) {
-          unordered_map<int, int> m; 
-
-    for (int i = 0; i < n; i++) {
+    unordered_map<int,int> m;
+    vector<int>temp;
+    for(int i = 0 ; i < n ; i++){
         m[arr[i]]++;
     }
-
-    vector<int> duplicates;
-   for (auto entry : m) {
-        if (entry.second > 1) { 
-            duplicates.push_back(entry.first); 
+    for(auto itr:m) {
+        if(itr.second>1){
+            temp.push_back(itr.first);
         }
     }
+    sort(temp.begin(),temp.end());
+    if(temp.empty()){
+        temp.push_back(-1);
+    }
+    return temp;
 
-    sort(duplicates.begin(), duplicates.end());
-
-    if (duplicates.empty())
-        duplicates.push_back(-1);
-
-    return duplicates;
     }
 };
 
