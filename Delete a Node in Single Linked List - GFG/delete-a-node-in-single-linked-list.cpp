@@ -99,7 +99,7 @@ Node* deleteNode(Node *head,int x)
         count++;
     }
 
-    if (temp == NULL || temp->next == NULL) {
+    if (temp == NULL ) {
         // x is out of bounds, return the original list
         return head;
     }
