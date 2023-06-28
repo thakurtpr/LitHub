@@ -41,7 +41,7 @@ class Solution
         
         while(current!=NULL){
           
-              next = current->next; // Get the next node before modifying the pointers
+              next = current->next; 
             current->next = previous;
             previous = current;
             current = next;
