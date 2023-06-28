@@ -94,12 +94,12 @@ Node* deleteNode(Node *head,int x)
 
     Node* temp = head;
     int count = 1;
-    while (temp != nullptr && count < x - 1) {
+    while (temp != NULL && count < x - 1) {
         temp = temp->next;
         count++;
     }
 
-    if (temp == nullptr || temp->next == nullptr) {
+    if (temp == NULL || temp->next == NULL) {
         // x is out of bounds, return the original list
         return head;
     }
