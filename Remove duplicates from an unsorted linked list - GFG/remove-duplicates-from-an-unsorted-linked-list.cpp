@@ -46,7 +46,7 @@ class Solution
      if (!head)
             return nullptr;
 
-        std::unordered_set<int> seen;
+        unordered_set<int> seen;
         Node *current = head;
         Node *prev = nullptr;
 
